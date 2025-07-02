@@ -41,3 +41,74 @@ input:focus, button:focus {
   outline: 2px solid #27d827;
   outline-offset: 2px;
 }
+.menu {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.menu h2 {
+  color: #a8ff78;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.menu-item {
+  background-color: #111;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0 15px #27d82733;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  box-shadow: 0 0 20px #27d82788;
+}
+
+.menu-item h3 {
+  margin: 0;
+  color: #9efc6e;
+  font-size: 1.4rem;
+}
+
+.menu-item p {
+  margin: 0 1rem 0 0;
+  color: #ccffcc;
+  flex-grow: 1;
+  font-size: 1rem;
+}
+
+.menu-item .price {
+  font-weight: bold;
+  color: #b6ff9e;
+  margin-right: 1rem;
+  min-width: 60px;
+  text-align: right;
+  font-size: 1.1rem;
+}
+
+.menu-item button {
+  background-color: #1aaf1a;
+  color: #0a0a0a;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  min-width: 90px;
+}
+
+.menu-item button:hover {
+  background-color: #27d827;
+}
