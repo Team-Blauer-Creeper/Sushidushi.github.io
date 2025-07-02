@@ -1,12 +1,43 @@
-html{
-  background: black;
-  color: lawngreen;
+html {
+  background-color: #0a0a0a; /* Tiefes Schwarz für angenehmen Kontrast */
+  color: #9efc6e;            /* Weiches, modernes Hellgrün */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 1rem;
 }
-button{
-  background: green;
-  color: black;
+
+/* Modernisierter Button-Stil */
+button {
+  background-color: #1aaf1a;
+  color: #0a0a0a;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
-input{
-  background: lawngreen;
-  color: white;
+
+button:hover {
+  background-color: #27d827;
+}
+
+/* Eingabefeld-Stil */
+input {
+  background-color: #9efc6e;
+  color: #0a0a0a;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Optional: Auswahl- und Fokus-Effekte */
+input:focus, button:focus {
+  outline: 2px solid #27d827;
+  outline-offset: 2px;
 }
