@@ -1,0 +1,12 @@
+html{
+  background: black;
+  color: lawngreen;
+}
+button{
+  background: green;
+  color: black;
+}
+input{
+  background: lawngreen;
+  color: white;
+}

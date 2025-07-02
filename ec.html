@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>iBan bezahlen sushidushi</title>
+</head>
+<body>
+
+  <p>IBAN</p>
+  <input id="ibahn" name="iBahn" placeholder="z. B. DE61 5005 1111 0959 5631 56" />
+
+  <p>Passwort</p>
+  <input id="passwort" name="Passwort" type="password" placeholder="Mind. 6 Zeichen" />
+
+  <button onclick="validate()">Bezahlen</button>
+
+  <script>
+    function validate() {
+      const ibahn = document.getElementById('ibahn').value.trim().replace(/\s/g, '');
+      const pw = document.getElementById('passwort').value.trim();
+
+      // Prüft: DE + 2 Ziffern + 18 Ziffern
+      const ibanPattern = /^DE\d{20}$/;
+
+      if (!ibanPattern.test(ibahn)) {
+        alert("Ungültige IBAN. Beispiel: DE61 5005 1111 0959 5631 56");
+        return;
+      }
+
+      if (pw.length < 6) {
+        alert("Passwort muss mindestens 6 Zeichen lang sein.");
+        return;
+      }
+
+      // Wenn gültig → weiter
+      window.location.href = "fertig.html";
+    }
+  </script>
+
+</body>
+</html>

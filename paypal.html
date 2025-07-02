@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css"/>
+  <title>PayPal bezahlen sushidushi</title>
+</head>
+<body>
+
+  <p>PayPal E-Mail</p>
+  <input id="email" type="email" placeholder="z. B. name@example.com" required>
+
+  <p>PayPal Passwort</p>
+  <input id="password" type="password" placeholder="Mindestens 6 Zeichen" required>
+
+  <button onclick="validate()">Bezahlen</button>
+
+  <script>
+    function validate() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailRegex.test(email)) {
+        alert('Bitte gib eine gültige E-Mail-Adresse ein.');
+        return;
+      }
+
+      if (password.length < 6) {
+        alert('Das Passwort muss mindestens 6 Zeichen lang sein.');
+        return;
+      }
+
+      // Beispielhafte Weiterleitung nach "erfolgreicher" Validierung
+      window.location.href = "fertig.html";
+    }
+  </script>
+
+</body>
+</html>
